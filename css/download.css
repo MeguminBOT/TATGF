@@ -117,6 +117,129 @@
     font-size: 1rem;
 }
 
+/* Enhanced Download Options Container */
+.download-options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.download-group {
+    background: var(--light-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.download-group:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.download-group-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.download-group-header .group-icon {
+    font-size: 1.5rem;
+    width: 2rem;
+    text-align: center;
+}
+
+.download-group-header .group-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.download-group-header .group-title {
+    font-weight: 600;
+    color: var(--text-color);
+    font-size: 0.95rem;
+}
+
+.download-group-header .group-desc {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    opacity: 0.8;
+}
+
+.download-group-buttons {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.download-group-buttons .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    min-width: 80px;
+    text-align: center;
+}
+
+.download-group-buttons .btn-outline {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+}
+
+.download-group-buttons .btn-outline:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    background: rgba(var(--primary-rgb, 59, 130, 246), 0.1);
+}
+
+.download-group-buttons .btn-disabled {
+    background: var(--surface);
+    border: 1px solid var(--border-color);
+    color: var(--text-light);
+    cursor: not-allowed;
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.download-group-buttons .loading-placeholder {
+    color: var(--text-light);
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+
+.download-group-buttons .not-available {
+    color: var(--text-light);
+    font-size: 0.85rem;
+    opacity: 0.6;
+    font-style: italic;
+}
+
+.download-group-buttons .coming-soon {
+    color: var(--primary-color);
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 0.4rem 0.8rem;
+    background: rgba(var(--primary-rgb, 59, 130, 246), 0.1);
+    border-radius: var(--border-radius);
+}
+
+.releases-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.releases-link:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
 /* Requirements Section */
 .requirements-section {
     margin-bottom: 4rem;
@@ -581,6 +704,19 @@
         flex-direction: column;
     }
     
+    .download-group-buttons {
+        justify-content: center;
+    }
+    
+    .download-group-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .download-group-header .group-info {
+        align-items: center;
+    }
+    
     .method-card {
         padding: 1.5rem;
     }
@@ -625,6 +761,15 @@
     
     .download-card {
         padding: 1.5rem;
+    }
+    
+    .download-group {
+        padding: 0.75rem;
+    }
+    
+    .download-group-buttons .btn {
+        flex: 1 1 auto;
+        min-width: 70px;
     }
     
     .method-card {

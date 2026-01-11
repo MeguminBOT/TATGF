@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - TextureAtlas to GIF and Frames</title>
-    <meta name="description" content="About TextureAtlas to GIF and Frames - Learn about the project">
-    <meta name="keywords" content="texture atlas, gif, webp, apng, sprite extraction, about, open source, project">
+    <title>About - TextureAtlas Toolbox</title>
+    <meta name="description" content="About TextureAtlas Toolbox - Learn about the project">
+    <meta name="keywords" content="texture atlas, gif, webp, apng, sprite extraction, about, open source, project, generator, editor">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/navigation.css">
     <link rel="stylesheet" href="css/footer.css">
@@ -19,8 +19,8 @@
             <div class="nav-container">
                 <div class="nav-logo">
                     <a href="index.html">
-                        <img src="assets/icons/app.svg" alt="TextureAtlas to GIF and Frames" class="logo-icon">
-                        TextureAtlas to GIF and Frames
+                        <img src="assets/icons/app.svg" alt="TextureAtlas Toolbox" class="logo-icon">
+                        TextureAtlas Toolbox
                     </a>
                 </div>
                 <ul class="nav-menu">
@@ -55,7 +55,7 @@
     <main class="main-content">
         <section class="hero-section">
             <div class="container">
-                <h1>ℹ️ About TextureAtlas to GIF and Frames</h1>
+                <h1>ℹ️ About TextureAtlas Toolbox</h1>
                 <p class="hero-description">
                     Learn about how it all started to make sprite extraction easier.
                 </p>
@@ -68,16 +68,16 @@
                     <div class="about-text">
                         <h2>🎯 The Mission</h2>
                         <p>
-                            TextureAtlas to GIF and Frames was created out of necessity because honestly, there just weren't any good tools 
+                            TextureAtlas Toolbox was created out of necessity because honestly, there just weren't any good tools 
                             for extracting spritesheets in big batches. The few options that existed were either terrible to use, way too 
                             complicated, or could only handle one spritesheet at a time - which was time consuming when you had 
                             dozens of files to extract.
                         </p>
                         
                         <p>
-                            So this tool was made to fill that gap and make sprite extraction faster and easier. 
-                            It lets you extract animations and individual frames from tons of spritesheets all at once. 
-                            The goal is to keep it free and open-source so everyone can benefit from it.
+                            So this tool was made to fill that gap and make sprite work faster and easier. 
+                            It lets you extract animations and individual frames from tons of spritesheets, generate new atlases from loose images, 
+                            and align sprites with the visual editor. The goal is to keep it free and open-source so everyone can benefit from it.
                         </p>
                     </div>
                     
@@ -146,6 +146,19 @@
                             </p>
                         </div>
                     </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>🌟 v2.0.0 - TextureAtlas Toolbox</h3>
+                            <p>
+                                Major rewrite with Qt-based (PySide6) user interface featuring three main workflows: 
+                                Extract tab for batch extraction, Generate tab for creating new atlases, and Editor tab for 
+                                sprite alignment. Rebranded from "TextureAtlas to GIF and Frames" to "TextureAtlas Toolbox" to 
+                                reflect expanded capabilities beyond extraction.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -207,7 +220,7 @@
                         <div class="value-icon">🆓</div>
                         <h3>Free Forever</h3>
                         <p>
-                            I believe useful tools should be accessible to everyone. TextureAtlas to GIF and Frames will always be free, 
+                            I believe useful tools should be accessible to everyone. TextureAtlas Toolbox will always be free, 
                             with no premium features or subscription models.
                         </p>
                     </div>
@@ -258,15 +271,14 @@
                         <h3>🐍 Core Technology</h3>
                         <div class="tech-list">
                             <div class="tech-item">
-                                <strong>Python</strong>
-                                <p>While not the best or fastest language for the task, it is quick to develop in and easy to learn.
+                                <strong>Python 3.14+</strong>
+                                <p>While not the fastest language for the task, it is quick to develop in and easy to learn.
                                     Chosen primarily because I wanted to learn it</p>
                             </div>
                             <div class="tech-item">
-                                <strong>Tkinter</strong>
-                                <p>Does it's job but is a very basic and dated looking GUI framework.
-                                    Chosen because of its incredibly simple syntax, it allowed me to focus more on learning python rather than needing to learn a more complex framework.
-                                    The next major version (2.0.0) will switch to Qt for a more modern looking UI
+                                <strong>PySide6 (Qt 6)</strong>
+                                <p>Modern Qt-based GUI framework providing a professional-looking tabbed interface with
+                                    Extract, Generate, and Editor tabs for a complete texture atlas workflow.
                                 </p>
                             </div>
                         </div>
@@ -397,7 +409,7 @@
                     <div class="license-card">
                         <h3>🔓 AGPL-3.0 License</h3>
                         <p>
-                            TextureAtlas to GIF and Frames is released under the GNU Affero General Public License v3.0 (AGPL-3.0). 
+                            TextureAtlas Toolbox is released under the GNU Affero General Public License v3.0 (AGPL-3.0). 
                             This ensures that the software remains free and open source, and that any derivative works must also be 
                             made available under the same license.
                         </p>
@@ -479,10 +491,10 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="footer-logo">
-                        <img src="assets/icons/app.svg" alt="TextureAtlas to GIF and Frames" class="footer-logo-icon">
+                        <img src="assets/icons/app.svg" alt="TextureAtlas Toolbox" class="footer-logo-icon">
                         <div>
-                            <h3>TextureAtlas to GIF and Frames</h3>
-                            <p>Free and open-source texture atlas extraction tool</p>
+                            <h3>TextureAtlas Toolbox</h3>
+                            <p>Free and open-source texture atlas tool</p>
                         </div>
                     </div>
                 </div>
@@ -508,7 +520,7 @@
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2024 TextureAtlas to GIF and Frames. Licensed under AGPL-3.0</p>
+                <p>&copy; 2025 TextureAtlas Toolbox. Licensed under AGPL-3.0</p>
             </div>
         </div>
     </footer>

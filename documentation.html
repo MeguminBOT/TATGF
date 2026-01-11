@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documentation - TextureAtlas to GIF and Frames</title>
-    <meta name="description" content="Complete documentation for TextureAtlas to GIF and Frames - guides, tutorials, and references">
-    <meta name="keywords" content="texture atlas, gif, webp, apng, sprite extraction, documentation, guide, tutorial">
+    <title>Documentation - TextureAtlas Toolbox</title>
+    <meta name="description" content="Complete documentation for TextureAtlas Toolbox - guides, tutorials, and references">
+    <meta name="keywords" content="texture atlas, gif, webp, apng, sprite extraction, documentation, guide, tutorial, generator, editor">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/navigation.css">
     <link rel="stylesheet" href="css/footer.css">
@@ -19,8 +19,8 @@
             <div class="nav-container">
                 <div class="nav-logo">
                     <a href="index.html">
-                        <img src="assets/icons/app.svg" alt="TextureAtlas to GIF and Frames" class="logo-icon">
-                        TextureAtlas to GIF and Frames
+                        <img src="assets/icons/app.svg" alt="TextureAtlas Toolbox" class="logo-icon">
+                        TextureAtlas Toolbox
                     </a>
                 </div>
                 <ul class="nav-menu">
@@ -57,7 +57,7 @@
             <div class="container">
                 <h1>📖 Documentation</h1>
                 <p class="hero-description">
-                    Comprehensive guides and documentation for TextureAtlas to GIF and Frames
+                    Comprehensive guides and documentation for TextureAtlas Toolbox v2.0
                 </p>
             </div>
         </section>
@@ -79,7 +79,7 @@
                         </div>
                         <div class="doc-content">
                             <h3>User Manual</h3>
-                            <p>Complete user guide covering all features and functionality</p>
+                            <p>Complete guide to Extract, Generate, and Editor tabs</p>
                         </div>
                     </a>
                     
@@ -107,6 +107,14 @@
                         </div>
                     </a>
                     
+                    <a href="https://github.com/MeguminBOT/TextureAtlas-to-GIF-and-Frames/blob/main/docs/format-reference.md" class="doc-link" target="_blank" rel="noopener noreferrer">
+                        <div class="doc-icon">📑</div>
+                        <div class="doc-content">
+                            <h3>Format Reference</h3>
+                            <p>In-depth technical specs for all atlas formats</p>
+                        </div>
+                    </a>
+                    
                     <a href="#batch-processing" class="doc-link">
                         <div class="doc-icon">⚙️</div>
                         <div class="doc-content">
@@ -128,6 +136,14 @@
                         <div class="doc-content">
                             <h3>Developer Documentation</h3>
                             <p>Contributing guidelines and development setup</p>
+                        </div>
+                    </a>
+                    
+                    <a href="https://github.com/MeguminBOT/TextureAtlas-to-GIF-and-Frames/blob/main/docs/translation-guide.md" class="doc-link" target="_blank" rel="noopener noreferrer">
+                        <div class="doc-icon">🌐</div>
+                        <div class="doc-content">
+                            <h3>Translation Guide</h3>
+                            <p>Localize the UI with Qt .ts files</p>
                         </div>
                     </a>
                     
@@ -228,32 +244,40 @@
                 
                 <div class="format-categories">
                     <div class="format-category">
-                        <h3>Input Formats</h3>
+                        <h3>Input Formats (Extraction)</h3>
                         <div class="format-list">
                             <div class="format-item supported">
-                                <h4>✅ Sparrow (XML)</h4>
-                                <p>Sparrow framework texture atlas format</p>
+                                <h4>✅ XML Formats</h4>
+                                <p>Starling/Sparrow XML, TexturePacker XML</p>
                             </div>
                             <div class="format-item supported">
-                                <h4>✅ Starling (XML)</h4>
-                                <p>Starling framework texture atlas format</p>
+                                <h4>✅ JSON Formats</h4>
+                                <p>JSON Hash/Array, Phaser 3, Aseprite JSON, Egret2D</p>
                             </div>
                             <div class="format-item supported">
-                                <h4>✅ Packer (TXT)</h4>
-                                <p>TexturePacker TXT output format</p>
+                                <h4>✅ Text & Binary</h4>
+                                <p>Spine Atlas, Simple TXT, Cocos2d Plist, UIKit Plist</p>
+                            </div>
+                            <div class="format-item supported">
+                                <h4>✅ Engine-Specific</h4>
+                                <p>Godot, Unity, Paper2D (Unreal), CSS Spritesheet</p>
+                            </div>
+                            <div class="format-item supported">
+                                <h4>✅ Adobe Animate</h4>
+                                <p>Animation.json + spritemap pairs with matrix transforms</p>
                             </div>
                             <div class="format-item partial">
-                                <h4>🟨 Unknown/Custom</h4>
-                                <p>Attempts extraction without metadata</p>
+                                <h4>🟨 Unknown/No Metadata</h4>
+                                <p>Chroma key extraction for atlases without metadata</p>
                             </div>
                         </div>
                     </div>
                     
                     <div class="format-category">
-                        <h3>Output Formats</h3>
+                        <h3>Output Formats (Generation)</h3>
                         <div class="format-list">
                             <div class="format-item supported">
-                                <h4>Animations</h4>
+                                <h4>Animation Formats</h4>
                                 <ul>
                                     <li>GIF - Universal compatibility</li>
                                     <li>WebP - Modern, efficient</li>
@@ -267,6 +291,14 @@
                                     <li>WebP - Modern compression</li>
                                     <li>AVIF - Next-gen format</li>
                                     <li>BMP, DDS, TGA, TIFF - Specialized formats</li>
+                                </ul>
+                            </div>
+                            <div class="format-item supported">
+                                <h4>Metadata Formats</h4>
+                                <ul>
+                                    <li>Starling/Sparrow XML, TexturePacker XML</li>
+                                    <li>JSON Hash/Array, Phaser 3, Aseprite</li>
+                                    <li>Spine, Godot, Unity, Paper2D, CSS</li>
                                 </ul>
                             </div>
                         </div>
@@ -312,10 +344,10 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="footer-logo">
-                        <img src="assets/icons/app.svg" alt="TextureAtlas to GIF and Frames" class="footer-logo-icon">
+                        <img src="assets/icons/app.svg" alt="TextureAtlas Toolbox" class="footer-logo-icon">
                         <div>
-                            <h3>TextureAtlas to GIF and Frames</h3>
-                            <p>Free and open-source texture atlas extraction tool</p>
+                            <h3>TextureAtlas Toolbox</h3>
+                            <p>Free and open-source texture atlas tool</p>
                         </div>
                     </div>
                 </div>
@@ -340,7 +372,7 @@
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2024 TextureAtlas to GIF and Frames. Licensed under AGPL-3.0</p>
+                <p>&copy; 2025 TextureAtlas Toolbox. Licensed under AGPL-3.0</p>
             </div>
         </div>
     </footer>

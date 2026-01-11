@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Installation Guide - TextureAtlas to GIF and Frames</title>
-    <meta name="description" content="Complete installation guide for TextureAtlas to GIF and Frames - step-by-step instructions for all platforms">
-    <meta name="keywords" content="texture atlas, gif, webp, apng, sprite extraction, installation, setup, guide">
+    <title>Installation Guide - TextureAtlas Toolbox</title>
+    <meta name="description" content="Complete installation guide for TextureAtlas Toolbox - step-by-step instructions for all platforms">
+    <meta name="keywords" content="texture atlas, gif, webp, apng, sprite extraction, installation, setup, guide, Python 3.14">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/navigation.css">
     <link rel="stylesheet" href="css/footer.css">
@@ -19,8 +19,8 @@
             <div class="nav-container">
                 <div class="nav-logo">
                     <a href="index.html">
-                        <img src="assets/icons/app.svg" alt="TextureAtlas to GIF and Frames" class="logo-icon">
-                        TextureAtlas to GIF and Frames
+                        <img src="assets/icons/app.svg" alt="TextureAtlas Toolbox" class="logo-icon">
+                        TextureAtlas Toolbox
                     </a>
                 </div>
                 <ul class="nav-menu">
@@ -97,8 +97,7 @@
                 <!-- Main Content -->
                 <div class="docs-content">
                         <blockquote>
-                            <p><strong>Note:</strong> This guide will walk you through installing and setting up TextureAtlas-to-GIF-and-Frames on your system. Mac OS X and Linux users or developers can refer to the detailed manual installation sections.</p>
-                            <p><em><strong>This doc file was partly written by AI, some parts may need to be rewritten which I will do whenever I have time</strong></em></p>
+                            <p><strong>Note:</strong> TextureAtlas Toolbox v2.0.0 uses a fully Qt-based (PySide6) user interface. This guide will walk you through installing and setting up the application on your system. macOS and Linux users or developers can refer to the detailed manual installation sections.</p>
                         </blockquote>
 
                         <!-- System Requirements -->
@@ -108,10 +107,10 @@
                             <div id="minimum-requirements">
                                 <h3>Minimum Requirements</h3>
                                 <ul>
-                                    <li><strong>Operating System:</strong> Windows 7+, macOS 10.12+, or Linux (Ubuntu/Debian/CentOS/Fedora etc)</li>
+                                    <li><strong>Operating System:</strong> Windows 10+, macOS 11+, or Linux (Ubuntu 20.04+/Debian 11+/Fedora 36+)</li>
                                     <li><strong>CPU:</strong> At least 2 cores (dual-core or better required)</li>
-                                    <li><strong>Python:</strong> Version 3.10 or higher</li>
-                                    <li><strong>RAM:</strong> At least 4GB</li>
+                                    <li><strong>Python:</strong> Version 3.14 or higher</li>
+                                    <li><strong>RAM:</strong> At least 8GB</li>
                                     <li><strong>Storage:</strong> 1GB for application + output of single spritesheet processing (5GB+ recommended for batch processing)</li>
                                     <li><strong>Internet Access:</strong> Required for downloading dependencies and updates</li>
                                 </ul>
@@ -120,11 +119,11 @@
                             <div id="recommended-requirements">
                                 <h3>Recommended Requirements</h3>
                                 <ul>
-                                    <li><strong>Operating System:</strong> Windows 10/11 (64-bit), macOS 11+ (Big Sur or later), or recent Linux (Ubuntu 20.04+/Fedora 36+)</li>
+                                    <li><strong>Operating System:</strong> Windows 10/11 (64-bit), macOS 11+ (Big Sur or later), or recent Linux (Ubuntu 22.04+/Fedora 38+)</li>
                                     <li><strong>CPU:</strong> Quad-core or better</li>
-                                    <li><strong>Python:</strong> Version 3.12 or higher (64-bit)</li>
-                                    <li><strong>RAM:</strong> 8GB or more (16GB+ recommended for batch processing large atlases)</li>
-                                    <li><strong>Storage:</strong> SSD with 10GB+ free space for faster processing speeds but a regular hard drive will suffice</li>
+                                    <li><strong>Python:</strong> Version 3.14 or higher (64-bit)</li>
+                                    <li><strong>RAM:</strong> 16GB or more (32GB+ recommended for batch processing large atlases or Adobe Animate spritemaps)</li>
+                                    <li><strong>Storage:</strong> SSD with 10GB+ free space for faster processing speeds (a regular hard drive will suffice for smaller workloads)</li>
                                     <li><strong>Internet Access:</strong> Required for downloading dependencies and updates</li>
                                 </ul>
                             </div>
@@ -134,7 +133,7 @@
                                 <ul>
                                     <li>32-bit operating systems are <strong>not officially supported</strong> and will <strong>not receive troubleshooting help</strong>.</li>
                                     <li>Operating systems below macOS 11, Windows 10, and older Linux distributions are <strong>not officially supported</strong> and will <strong>not receive troubleshooting help</strong>.</li>
-                                    <li>Python versions below 3.10 are <strong>not officially supported</strong> and will <strong>not receive troubleshooting help</strong>.</li>
+                                    <li>Python versions below 3.14 are <strong>not officially supported</strong> and will <strong>not receive troubleshooting help</strong>.</li>
                                 </ul>
                             </blockquote>
                         </section>
@@ -142,11 +141,14 @@
                         <!-- Normal Install -->
                         <section id="normal-install">
                             <h2>🚀 Normal Install (Windows only)</h2>
+                            <blockquote>
+                                <p>⚠️ <strong>Antivirus False Positives:</strong> The Windows executable releases may be flagged as malware by antivirus software. This is a common false positive for Python applications compiled with tools like Nuitka. The application is open-source and safe—you can verify the code yourself. Add an exception for the executable or use the Manual Installation method to run from source.</p>
+                            </blockquote>
                             <ol>
                                 <li>Go to the <a href="https://github.com/MeguminBOT/TextureAtlas-to-GIF-and-Frames/releases" target="_blank" rel="noopener noreferrer">GitHub Releases page</a>.</li>
                                 <li>Download the latest release ZIP or 7z file.</li>
-                                <li>Extract all files to a folder of your choice (e.g., <code>C:\TextureAtlas-to-GIF-and-Frames</code>).</li>
-                                <li>Run "TextureAtlas to GIF and Frames.exe"</li>
+                                <li>Extract all files to a folder of your choice (e.g., <code>C:\TextureAtlasToolbox</code>).</li>
+                                <li>Run <code>TextureAtlas Toolbox.exe</code>.</li>
                             </ol>
                             <p><strong>That's it!</strong> If you encounter any issues, check the <a href="#troubleshooting">Troubleshooting section</a> below.</p>
                         </section>
@@ -239,15 +241,14 @@
 
                                 <h5>Full Manual Installation</h5>
                                 <p>If you prefer, you can install packages individually:</p>
-                                <pre><code>pip install certifi charset-normalizer colorama idna numpy pillow psutil requests tqdm urllib3 Wand tkinter py7zr</code></pre>
-                                <p><strong>Note:</strong> On some Linux systems, you may need to install <code>tkinter</code> separately (see Troubleshooting).</p>
+                                <pre><code>pip install PySide6 certifi charset-normalizer colorama idna numpy pillow psutil requests tqdm urllib3 Wand py7zr</code></pre>
 
                                 <h5>Package Details</h5>
                                 <ul>
+                                    <li><strong>PySide6:</strong> Qt 6 bindings for Python (GUI framework)</li>
                                     <li><strong>Pillow (PIL):</strong> Image processing and manipulation</li>
                                     <li><strong>Wand:</strong> Python binding for ImageMagick</li>
                                     <li><strong>NumPy:</strong> Numerical operations for image arrays</li>
-                                    <li><strong>Tkinter:</strong> GUI framework (usually included with Python)</li>
                                     <li><strong>Requests:</strong> HTTP library for update checking</li>
                                     <li><strong>certifi:</strong> Root certificates for validating the trustworthiness of SSL certificates</li>
                                     <li><strong>charset-normalizer:</strong> Encoding detection for text files and web content</li>
@@ -326,9 +327,9 @@ cd TextureAtlas-to-GIF-and-Frames</code></pre>
 
                             <h3>Python Not Recognized</h3>
                             <ul>
-                                <li><strong>Windows:</strong> Run <code>setup/setup_windows.bat</code> or reinstall Python and ensure "Add Python to PATH" is checked.</li>
-                                <li><strong>macOS:</strong> Run <code>setup/setup_macOSX.sh</code> or install Python via Homebrew. (The setup script for OSX is experimental and not tested by me)</li>
-                                <li><strong>Linux:</strong> Install Python using your package manager.</li>
+                                <li><strong>Windows:</strong> Run <code>setup/setup_windows.bat</code> or reinstall Python 3.14+ and ensure "Add Python to PATH" is checked.</li>
+                                <li><strong>macOS:</strong> Run <code>setup/setup_macOSX.sh</code> or install Python via Homebrew. (The setup script for macOS is experimental)</li>
+                                <li><strong>Linux:</strong> Install Python 3.14+ using your package manager or build from source.</li>
                             </ul>
 
                             <h3>Missing Packages</h3>
@@ -345,13 +346,10 @@ cd TextureAtlas-to-GIF-and-Frames</code></pre>
                             <p>Install Pillow:</p>
                             <pre><code>pip install Pillow</code></pre>
 
-                            <h3>"tkinter not found" (Linux)</h3>
-                            <p><strong>Ubuntu/Debian:</strong></p>
-                            <pre><code>sudo apt install python3-tk</code></pre>
-                            <p><strong>Fedora:</strong></p>
-                            <pre><code>sudo dnf install python3-tkinter</code></pre>
-                            <p><strong>CentOS/RHEL:</strong></p>
-                            <pre><code>sudo yum install tk-devel</code></pre>
+                            <h3>PySide6 Installation Issues</h3>
+                            <p>If you encounter issues with PySide6:</p>
+                            <pre><code>pip install --upgrade PySide6</code></pre>
+                            <p>On Linux, you may need to install additional Qt dependencies for your distribution.</p>
                         </section>
 
                         <!-- Verifying Installation -->
@@ -377,7 +375,7 @@ python Main.py</code></pre>
                         </section>
 
                         <div class="last-updated">
-                            <p><em>Last updated: June 17, 2025 - Version 1.9.5</em></p>
+                            <p><em>Last updated: December 18, 2025 - Version 2.0.0</em></p>
                         </div>
                     </div>
                 </div>
